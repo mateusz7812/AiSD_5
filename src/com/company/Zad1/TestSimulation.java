@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Stack;
 
-public class TestZad1 {
+public class TestSimulation {
     @Test
     public void Test1(){
         var simulation = new SimulationTemplate(new Stack<>());

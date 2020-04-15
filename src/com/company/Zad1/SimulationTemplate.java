@@ -11,17 +11,17 @@ public class SimulationTemplate {
 
     public void Process(){
         int length;
-        Integer last;
+        Integer lastFlower;
         while (true){
             length = flowers.size();
             Stack<Integer> temp = new Stack<>();
-            last = null;
+            lastFlower = null;
             while(!flowers.empty()){
                 Integer flower = flowers.pop();
-                if(last == null || last >= flower) {
+                if(lastFlower == null || lastFlower >= flower) {
                     temp.push(flower);
                 }
-                last = flower;
+                lastFlower = flower;
             }
             while(!temp.empty()) flowers.push(temp.pop());
             if(length == flowers.size()){
